@@ -1,0 +1,2 @@
+D:\TUS\GLUT\gt41samples\gt41samples\firsttriangle\Debug\firsttriangle.exe
+E:\TUS\GLUT\gt41samples\gt41samples\firsttriangle\Debug\firsttriangle.exe
