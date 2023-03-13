@@ -1,0 +1,8 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Project_part_1_version2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  ProjectRenderer.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'ProjectRenderer.cpp': No such file or directory
+  GameObject.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'GameObject.cpp': No such file or directory
+  ShaderTechnique.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'ShaderTechnique.cpp': No such file or directory
+  Generating Code...
