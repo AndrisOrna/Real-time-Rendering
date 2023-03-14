@@ -1,1 +1,2 @@
 E:\TUS\GLUT\gt41samples\gt41samples\project\Debug\project.exe
+C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\project\Debug\project.exe

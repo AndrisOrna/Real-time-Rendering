@@ -9,7 +9,11 @@ GameObject2 gameObjectTriangle;
 GameObject2 gameObjectTriangle2;
 GameObject2 gameObjectSquare;
 //GameObject gameObject3;
+static float Xangle = 0.0, Yangle = 0.0, Zangle = 0.0; // Angles to rotate objects.
+static int objID = 1; // Object ID.
 
+static float Xvalue = 0.0, Yvalue = 0.0; // Co-ordinates of the sphere.
+static float Angle = 0.0; // Angle to rotate the sphere.
 //struct SimpleVertex
 //{
 //	glm::vec3		pos;	// Position
@@ -18,7 +22,10 @@ GameObject2 gameObjectSquare;
 static void renderSceneCallBack()
 {
 	glClear(GL_COLOR_BUFFER_BIT);
-
+	
+	// Set the position of the sphere.
+	glTranslatef(Xvalue, Yvalue, -5.0);
+	glRotatef(Angle, 1.0, 1.0, 1.0);
 	gameObjectTriangle.shader->buildShader("vertexShader.glsl", "fragmentShader.glsl");
 	gameObjectTriangle.render();
 
@@ -33,6 +40,66 @@ static void renderSceneCallBack()
 	glutSwapBuffers();
 }
 
+// Callback routine for non-ASCII key entry.
+//void specialKeyInput(int key, int x, int y)
+//{
+//	if (key == GLUT_KEY_UP) Yvalue += 0.1;
+//	if (key == GLUT_KEY_DOWN) Yvalue -= 0.1;
+//	if (key == GLUT_KEY_LEFT) Xvalue -= 0.1;
+//	if (key == GLUT_KEY_RIGHT) Xvalue += 0.1;
+//	glutSwapBuffers();
+//	//glutPostRedisplay();
+//}
+// Keyboard input processing routine.
+void keyInput(unsigned char key, int x, int y)
+{
+	switch (key)
+	{
+	case 'r':
+		Xvalue = Yvalue = Angle = 0.0;
+		glutSwapBuffers();
+		//glutPostRedisplay();
+		break;
+	case ' ':
+		Angle += 10.0;
+		glutSwapBuffers();
+		//glutPostRedisplay();
+		break;
+	case 27:
+		exit(0);
+		break;
+	default:
+		break;
+	}
+}
+// Callback routine for non-ASCII key entry.
+void specialKeyInput(int key, int x, int y)
+{
+	if (key == GLUT_KEY_DOWN)
+	{
+		if (objID > 1) objID--;
+		else objID = 3;
+	}
+	if (key == GLUT_KEY_LEFT)
+	{
+		if (objID > 1) objID--;
+		else objID = 3;
+	}
+	if (key == GLUT_KEY_UP)
+	{
+		if (objID < 3) objID++;
+		else objID = 1;
+	}
+	if (key == GLUT_KEY_RIGHT)
+	{
+		if (objID < 3) objID++;
+		else objID = 1;
+	}
+
+	Xangle = Yangle = Zangle = 0.0;
+	glutPostRedisplay();
+}
+
 static void initializeGlutCallbacks()
 {
 	glutDisplayFunc(renderSceneCallBack);
@@ -40,42 +107,86 @@ static void initializeGlutCallbacks()
 
 static void createGameObjects()
 {
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	//////// Triangle 1 ////
-	const int numVertsTriangle = 3;	// use this once or duplicate for each vbo
 
-	gameObjectTriangle = GameObject2();
-	vec3 vert_gameObject1[numVertsTriangle];
-	vert_gameObject1[0] = vec3(-2.5f, 1.5f, 0.0f);
-	vert_gameObject1[1] = vec3(-1.5f, 1.5f, 0.0f);
-	vert_gameObject1[2] = vec3(-2.0f, 2.5f, 0.0f);
+	glLoadIdentity();
+	// Position the objects for viewing.
+	gluLookAt(0.0, 3.0, 12.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+	glLineWidth(2.0); // Thicken the wireframes.
 
-	gameObjectTriangle.createVertexBuffer(vert_gameObject1, numVertsTriangle);
+	// Commands to turn the objects.
+	glPushMatrix();
+	glRotatef(Zangle, 0.0, 0.0, 1.0);
+	glRotatef(Yangle, 0.0, 1.0, 0.0);
+	glRotatef(Xangle, 1.0, 0.0, 0.0);
+
+	// Set the position of the sphere.
+	//glTranslatef(Xvalue, Yvalue, -5.0);
+	//glRotatef(Angle, 1.0, 1.0, 1.0);
+
+	// Draw objects.
+	switch (objID)
+	{
+	case 1:
+		const int numVertsTriangle = 3;	// use this once or duplicate for each vbo
+
+		gameObjectTriangle = GameObject2();
+		vec3 vert_gameObject1[numVertsTriangle];
+		vert_gameObject1[0] = vec3(-2.5f, 1.5f, 0.0f);
+		vert_gameObject1[1] = vec3(-1.5f, 1.5f, 0.0f);
+		vert_gameObject1[2] = vec3(-2.0f, 2.5f, 0.0f);
+
+		gameObjectTriangle.createVertexBuffer(vert_gameObject1, numVertsTriangle);
+		//glutSolidSphere(5.0, 40, 40);
+		//objName = "Solid Sphere";
+		break;
+	case 2:
+		const int numvertstriangle2 = 3;	// use this once or duplicate for each vbo
+
+		gameObjectTriangle2 = GameObject2();
+		vec3 vert_gameobject2[numvertstriangle2];
+		vert_gameobject2[0] = vec3(2.5f, -1.5f, 0.0f);
+		vert_gameobject2[1] = vec3(1.5f, -1.5f, 0.0f);
+		vert_gameobject2[2] = vec3(2.0f, -2.5f, 0.0f);
+
+		gameObjectTriangle2.createVertexBuffer(vert_gameobject2, numvertstriangle2);
+		//glutWireSphere(5.0, 40, 40);
+		//objName = "Wire Sphere";
+		break;
+	
+	default:
+		break;
+	}
+	//glPopMatrix();
+
+	// Write label after disabling lighting.
+	//glDisable(GL_LIGHTING);
+	//glColor3f(0.0, 0.0, 0.0);
+	//writeObjectName();
+	//glEnable(GL_LIGHTING);
+
+	glutSwapBuffers();
+}
+	
 
 	//////// Triangle 2 ////
 
-	const int numVertsTriangle2 = 3;	// use this once or duplicate for each vbo
-
-	gameObjectTriangle2 = GameObject2();
-	vec3 vert_gameObject2[numVertsTriangle2];
-	vert_gameObject2[0] = vec3(2.5f, -1.5f, 0.0f);
-	vert_gameObject2[1] = vec3(1.5f, -1.5f, 0.0f);
-	vert_gameObject2[2] = vec3(2.0f, -2.5f, 0.0f);
-
-	gameObjectTriangle2.createVertexBuffer(vert_gameObject2, numVertsTriangle2);
+	
 
 
 	/// /////////////   SQUARE   ////////
-	const int numVertsSquare = 5;
+	//const int numVertsSquare = 5;
 	//gameObjectSquare = GameObject(GL_QUADS);
-	gameObjectSquare = GameObject2();
-	vec3 vert_gameObject3[numVertsSquare];
+	//gameObjectSquare = GameObject2();
+	//vec3 vert_gameObject3[numVertsSquare];
 	////glColor3f(0.0f, 1.0f, 0.0f);
 
-	vert_gameObject3[0] = vec3(-0.8f, 0.1f, 0.0f);// left bottom
-	vert_gameObject3[1] = vec3(-0.2f, 0.1f, 0.0f);// left top
-	vert_gameObject3[2] = vec3(-0.2f, 0.7f, 0.0f);// right top
-	vert_gameObject3[3] = vec3(-0.8f, 0.7f, 0.0f);// left bottom
-	gameObjectSquare.createVertexBuffer(vert_gameObject3, numVertsSquare);
+	//vert_gameObject3[0] = vec3(-0.8f, 0.1f, 0.0f);// left bottom
+	//vert_gameObject3[1] = vec3(-0.2f, 0.1f, 0.0f);// left top
+	//vert_gameObject3[2] = vec3(-0.2f, 0.7f, 0.0f);// right top
+	//vert_gameObject3[3] = vec3(-0.8f, 0.7f, 0.0f);// left bottom
+	//gameObjectSquare.createVertexBuffer(vert_gameObject3, numVertsSquare);
 
 	////////////   Interpolated object  ////////
 	/*SimpleVertex vertices[] =
@@ -127,11 +238,16 @@ static void createGameObjects()
 
 	gameObject3.createVertexBuffer(vert_gameObject3, numVerts);*/
 #endif 
-}
+
+// Drawing routine.
 
 int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
+
+	glutInitContextVersion(4, 3);
+	glutInitContextProfile(GLUT_COMPATIBILITY_PROFILE);
+
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowSize(800, 800);
 	glutInitWindowPosition(100, 100);
@@ -147,9 +263,12 @@ int main(int argc, char** argv)
 		cerr << "Error: " << glewGetErrorString(res) << "\n";
 		return 1;
 	}
-
+	//drawScene();
 	createGameObjects();
+	glutKeyboardFunc(keyInput);
 
+	// Register the callback function for non-ASCII key entry.
+	glutSpecialFunc(specialKeyInput);
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 
 	glutMainLoop();

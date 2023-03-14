@@ -1,2 +1,5 @@
 ﻿  project.cpp
-  project.vcxproj -> E:\TUS\GLUT\gt41samples\gt41samples\project\Debug\project.exe
+  tusrenderobj.cpp
+  Generating Code...
+  LINK : Debug\project.exe not found or not built by the last incremental link; performing full link
+  project.vcxproj -> C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\project\Debug\project.exe
