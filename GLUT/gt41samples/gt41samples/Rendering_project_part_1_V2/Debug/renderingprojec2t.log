@@ -1,15 +1,4 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Project_part_1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   ProjectRenderer2.cpp
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(144,2): error C2360: initialization of 'vert_gameObject1' is skipped by 'case' label
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(135,8): message : see declaration of 'vert_gameObject1'
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(144,2): error C2360: initialization of 'numVertsTriangle' is skipped by 'case' label
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(132,13): message : see declaration of 'numVertsTriangle'
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(158,2): error C2361: initialization of 'vert_gameobject2' is skipped by 'default' label
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(148,8): message : see declaration of 'vert_gameobject2'
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(158,2): error C2361: initialization of 'numvertstriangle2' is skipped by 'default' label
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(145,13): message : see declaration of 'numvertstriangle2'
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(158,2): error C2361: initialization of 'vert_gameObject1' is skipped by 'default' label
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(135,8): message : see declaration of 'vert_gameObject1'
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(158,2): error C2361: initialization of 'numVertsTriangle' is skipped by 'default' label
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(132,13): message : see declaration of 'numVertsTriangle'
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(199,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\ProjectRenderer2.cpp(213,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  renderingprojec2t.vcxproj -> C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V2\Debug\Project_part_1_version2.exe

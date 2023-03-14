@@ -19,16 +19,26 @@ static float Angle = 0.0; // Angle to rotate the sphere.
 //	glm::vec3		pos;	// Position
 //	glm::vec4		colour;	// Colour
 //};
-static void renderSceneCallBack()
-{
+static void Triangle1() {
+	const int numVertsTriangle = 3;
+	vec3 vert_gameObject1[numVertsTriangle];
+	gameObjectTriangle = GameObject2();
+	vert_gameObject1[0] = vec3(-2.5f, 1.5f, 0.0f);
+	vert_gameObject1[1] = vec3(-1.5f, 1.5f, 0.0f);
+	vert_gameObject1[2] = vec3(-2.0f, 2.5f, 0.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
-	
+
 	// Set the position of the sphere.
 	glTranslatef(Xvalue, Yvalue, -5.0);
 	glRotatef(Angle, 1.0, 1.0, 1.0);
 	gameObjectTriangle.shader->buildShader("vertexShader.glsl", "fragmentShader.glsl");
 	gameObjectTriangle.render();
-
+	glutSwapBuffers();
+}
+static void renderSceneCallBack()
+{
+	
+	
 	gameObjectTriangle2.shader->buildShader("vertexshader.glsl", "fragmentshader2.glsl");
 	gameObjectTriangle2.render();
 
@@ -77,27 +87,33 @@ void specialKeyInput(int key, int x, int y)
 {
 	if (key == GLUT_KEY_DOWN)
 	{
+		cout << "\n Key down pressed********" << endl;
 		if (objID > 1) objID--;
-		else objID = 3;
+		else objID = 2;
 	}
 	if (key == GLUT_KEY_LEFT)
 	{
+		cout << "\n Left key pressed********" << endl;
 		if (objID > 1) objID--;
-		else objID = 3;
+		else objID = 2;
 	}
 	if (key == GLUT_KEY_UP)
 	{
-		if (objID < 3) objID++;
+		cout << "\n Key up pressed********" << endl;
+		if (objID < 2) objID++;
 		else objID = 1;
 	}
 	if (key == GLUT_KEY_RIGHT)
 	{
-		if (objID < 3) objID++;
+		cout << "\n Key Right pressed********" << endl;
+		if (objID < 2) objID++;
 		else objID = 1;
 	}
 
 	Xangle = Yangle = Zangle = 0.0;
-	glutPostRedisplay();
+	gameObjectSquare.render();
+	glutSwapBuffers();
+	//glutPostRedisplay();
 }
 
 static void initializeGlutCallbacks()
@@ -124,33 +140,31 @@ static void createGameObjects()
 	// Set the position of the sphere.
 	//glTranslatef(Xvalue, Yvalue, -5.0);
 	//glRotatef(Angle, 1.0, 1.0, 1.0);
+		// use this once or duplicate for each vbo
+	const int numvertstriangle2 = 3;	// use this once or duplicate for each vbo
+	vec3 vert_gameobject2[numvertstriangle2];
+	
 
+	gameObjectTriangle2 = GameObject2();
+	vert_gameobject2[0] = vec3(2.5f, -1.5f, 0.0f);
+	vert_gameobject2[1] = vec3(1.5f, -1.5f, 0.0f);
+	vert_gameobject2[2] = vec3(2.0f, -2.5f, 0.0f);
 	// Draw objects.
 	switch (objID)
 	{
 	case 1:
-		const int numVertsTriangle = 3;	// use this once or duplicate for each vbo
-
-		gameObjectTriangle = GameObject2();
-		vec3 vert_gameObject1[numVertsTriangle];
-		vert_gameObject1[0] = vec3(-2.5f, 1.5f, 0.0f);
-		vert_gameObject1[1] = vec3(-1.5f, 1.5f, 0.0f);
-		vert_gameObject1[2] = vec3(-2.0f, 2.5f, 0.0f);
-
-		gameObjectTriangle.createVertexBuffer(vert_gameObject1, numVertsTriangle);
+		//Triangle1();
+		cout << "\n Triangle object created********" << endl;
+		/*gameObjectTriangle.shader->buildShader("vertexShader.glsl", "fragmentShader.glsl");
+		gameObjectTriangle.render();*/
 		//glutSolidSphere(5.0, 40, 40);
 		//objName = "Solid Sphere";
 		break;
 	case 2:
-		const int numvertstriangle2 = 3;	// use this once or duplicate for each vbo
-
-		gameObjectTriangle2 = GameObject2();
-		vec3 vert_gameobject2[numvertstriangle2];
-		vert_gameobject2[0] = vec3(2.5f, -1.5f, 0.0f);
-		vert_gameobject2[1] = vec3(1.5f, -1.5f, 0.0f);
-		vert_gameobject2[2] = vec3(2.0f, -2.5f, 0.0f);
-
-		gameObjectTriangle2.createVertexBuffer(vert_gameobject2, numvertstriangle2);
+		
+		cout << "\n Triangle2 object created********" << endl;
+		gameObjectTriangle2.shader->buildShader("vertexshader.glsl", "fragmentshader2.glsl");
+		gameObjectTriangle2.render();
 		//glutWireSphere(5.0, 40, 40);
 		//objName = "Wire Sphere";
 		break;
