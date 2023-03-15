@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Rendering_Project2.cpp">
+      <Filter>CPP files</Filter>
+    </ClCompile>
+    <ClCompile Include="cylinder.cpp">
+      <Filter>CPP files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>CPP files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>CPP files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rotate.cpp">
+      <Filter>CPP files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderTechnique.cpp">
+      <Filter>CPP files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cylinder.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderTechnique.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\andri\Downloads\fragmentshader.glsl" />
+    <None Include="C:\Users\andri\Downloads\vertexshader.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CPP files">
+      <UniqueIdentifier>{d23b94a1-f231-4e8d-b870-0e9aa165be09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header files">
+      <UniqueIdentifier>{b14bdc15-6e08-4e34-a999-70d06e5a0db7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

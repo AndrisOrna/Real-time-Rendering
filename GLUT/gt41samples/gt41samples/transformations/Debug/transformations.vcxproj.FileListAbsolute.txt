@@ -1,0 +1,2 @@
+C:\Users\andri\Downloads\transformations\transformations\Debug\transformations.exe
+C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\transformations\Debug\transformations.exe

@@ -1,0 +1,8 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Project_part_1_version2.vcxproj, Project_part_1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  ProjectRenderer2.cpp
+C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V1\ProjectRenderer2.cpp(88,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  GameObject2.cpp
+  ShaderTech2.cpp
+  ShaderTechnique2.cpp
+  Generating Code...
+  renderingproject.vcxproj -> C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V1\Debug\Project_part_1_version2.exe
