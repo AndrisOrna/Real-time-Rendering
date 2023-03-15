@@ -1,0 +1,6 @@
+E:\TUS\GLUT\gt41samples\gt41samples\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe
+D:\TUS\GLUT\gt41samples\gt41samples\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe
+C:\Users\andri\Documents\C++ Projects\gt41samples\gt41samples\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe
+E:\TUS\C++ Projects\gt41samples\gt41samples\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe
+E:\gt41samples\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe
+E:\Project Rendering\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe
