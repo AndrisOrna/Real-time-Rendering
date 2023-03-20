@@ -13,27 +13,29 @@ using namespace glm;
 
 class ShaderTechnique
 {
-private:
-	GLuint shaderProgram;
-
-	mat4 worldToViewTransform;
-	mat4 projectionTransform;
-
 public:
 
 	GLuint gModelToWorldTransformLocation;
 	GLuint gWorldToViewTransformLocation;
 	GLuint gProjectionTransformLocation;
 
-	ShaderTechnique();
+	ShaderTechnique();// default
+	GLuint Getting_ShaderTechniquesShader();
 
 	//ShaderTechnique();
 	string readFile(string fileName);
 	void addShader(GLuint shaderProgram, const char* pShaderText, GLenum shaderType);
-	void buildShader(string vertexShaderPath, string FragmentShaderPath);
-	GLuint Getting_ShaderTechniquesShader();
+	void buildShader(string vertexShaderPath, string fragmentShaderPath);
 	void useThisShader();
 	void updateThisShader(mat4 worldToViewTransform, mat4 projectionTransform);
+
+private:
+	GLuint shaderProgram;
+
+	mat4 worldToViewTransform;
+	mat4 projectionTransform;
+
+
 };
 
 ////#include "ShaderTechnique.h"

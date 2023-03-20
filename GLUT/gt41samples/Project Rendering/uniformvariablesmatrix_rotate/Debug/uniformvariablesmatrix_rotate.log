@@ -1,9 +1,7 @@
-﻿  main.cpp
-C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(38,20): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(56,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(93,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(98,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(164,12): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(165,21): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(165,11): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-  uniformvariablesmatrix_rotate.vcxproj -> C:\Users\a00129244\Documents\GitHub\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe
+﻿  GameObject.cpp
+  GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: perspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  main2.cpp
+  GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  Generating Code...
+  uniformvariablesmatrix_rotate.vcxproj -> C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe

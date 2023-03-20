@@ -61,8 +61,8 @@ void ShaderTechnique::buildShader(string vertexShaderPath, string fragmentShader
 		AIT_ASSERT(0, "Error creating shader program\n");
 	}
 
-	string VS = readFile("vertexshader.glsl");
-	string FS = readFile("fragmentshader.glsl");
+	string VS = readFile(vertexShaderPath);
+	string FS = readFile(fragmentShaderPath);
 
 	addShader(shaderProgram, VS.c_str(), GL_VERTEX_SHADER);
 	addShader(shaderProgram, FS.c_str(), GL_FRAGMENT_SHADER);
@@ -90,23 +90,12 @@ void ShaderTechnique::buildShader(string vertexShaderPath, string fragmentShader
 		ss << "Error linking shader program: " << errorLog << endl;
 		AIT_ASSERT(0, ss.str());
 	}
-
-	glUseProgram(shaderProgram);
-
-	
-}
-GLuint ShaderTechnique::Getting_ShaderTechniquesShader()
-{
-	return shaderProgram;
-}
-void ShaderTechnique::updateThisShader(mat4 worldToViewTransform, mat4 projectionTransform)
-{
-	glUniformMatrix4fv(gWorldToViewTransformLocation, 1, GL_FALSE, &worldToViewTransform[0][0]);
-	glUniformMatrix4fv(gProjectionTransformLocation, 1, GL_FALSE, &projectionTransform[0][0]);
 }
 void ShaderTechnique::useThisShader()
 {
 	glUseProgram(shaderProgram);
+	std::cout << "Using this shader:" << std::endl;
+	
 	gModelToWorldTransformLocation = glGetUniformLocation(shaderProgram, "gModelToWorldTransform");
 	assert(gModelToWorldTransformLocation != 0xFFFFFFFF);
 	gWorldToViewTransformLocation = glGetUniformLocation(shaderProgram, "gWorldToViewTransform");
@@ -114,4 +103,15 @@ void ShaderTechnique::useThisShader()
 	gProjectionTransformLocation = glGetUniformLocation(shaderProgram, "gProjectionTransform");
 	assert(gProjectionTransformLocation != 0xFFFFFFFF);
 
+}
+
+void ShaderTechnique::updateThisShader(mat4 worldToViewTransform, mat4 projectionTransform)
+{
+	glUniformMatrix4fv(gWorldToViewTransformLocation, 1, GL_FALSE, &worldToViewTransform[0][0]);
+	glUniformMatrix4fv(gProjectionTransformLocation, 1, GL_FALSE, &projectionTransform[0][0]);
+}
+
+GLuint ShaderTechnique::Getting_ShaderTechniquesShader()
+{
+	return shaderProgram;
 }

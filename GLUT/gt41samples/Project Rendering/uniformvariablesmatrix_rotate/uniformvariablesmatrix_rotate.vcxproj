@@ -14,6 +14,7 @@
     <ClCompile Include="cylinder.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="main2.cpp" />
     <ClCompile Include="Rendering_Project2.cpp" />
     <ClCompile Include="Rotate.cpp" />
     <ClCompile Include="ShaderTechnique.cpp" />
