@@ -70,18 +70,18 @@ void createObjects()
 
 	// Create vertex buffer
 	
-	/*GameObjectDetails verticesTriangle[NUMVERTS]
+	GameObjectDetails verticesTriangle[NUMVERTS]
 	{
-		{vec3(0.0f, 1.0f, 0.0f), vec4(1.0f, 0.0f, 0.0f, 1.0f), vec3(0.0f, 0.0f, 1.0f)},
-		{vec3(-1.0f, 0.0f, 0.0f),  vec4(0.0f, 1.0f, 0.0f, 1.0f), vec3(0.0f, 0.0f, 1.0f)},
-		{vec3(0.0f, 0.0f, 0.0f),  vec4(0.0f, 0.0f, 1.0f, 1.0f), vec3(0.0f, 0.0f, 1.0f)}
+		{vec3(0.0f, 1.0f, 0.0f), vec4(1.0f, 0.0f, 0.0f, 1.0f)},
+		{vec3(-1.0f, 0.0f, 0.0f),  vec4(0.0f, 1.0f, 0.0f, 1.0f)},
+		{vec3(0.0f, 0.0f, 0.0f),  vec4(0.0f, 0.0f, 1.0f, 1.0f)}
 	};
 
 	glGenBuffers(1, &VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(GameObjectDetails) * NUMVERTS, vertices, GL_STATIC_DRAW);*/
-	//Triangle1.createVertexBuffer(verticesTriangle, NUMVERTS);
-	//Triangle1.setShader(&shader1);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(GameObjectDetails) * NUMVERTS, vertices, GL_STATIC_DRAW);
+	Triangle1.createVertexBuffer(verticesTriangle, NUMVERTS);
+	Triangle1.setShader(&Shader1);
 
 }
 	
@@ -187,30 +187,13 @@ void drawScene(void)
 		break;
 	case 2:
 		
-		/*GameObjectDetails verticesTriangle1[NUMVERTS]
-		{
-			{vec3(0.0f, 1.0f, 0.0f), vec4(1.0f, 0.0f, 0.0f, 1.0f), vec3(0.0f, 0.0f, 1.0f)},
-			{vec3(-1.0f, 0.0f, 0.0f),  vec4(0.0f, 1.0f, 0.0f, 1.0f), vec3(0.0f, 0.0f, 1.0f)},
-			{vec3(0.0f, 0.0f, 0.0f),  vec4(0.0f, 0.0f, 1.0f, 1.0f), vec3(0.0f, 0.0f, 1.0f)}
-		};
-
-		glGenBuffers(1, &VBO);
-		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(GameObjectDetails) * NUMVERTS, verticesTriangle1, GL_STATIC_DRAW);
-		glEnableVertexAttribArray(0);
-		glBindBuffer(GL_ARRAY_BUFFER, VBO);
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-
-		Triangle1.createVertexBuffer(verticesTriangle1, NUMVERTS);
-		glDrawArrays(GL_LINES, 0, NUMVERTS);
-		glDisableVertexAttribArray(0);
+		Triangle1.render();
 		Shader1.updateThisShader(worldToViewTransform, projectionTransform);
-		Triangle1.render();*/
 
 
 		//glutSolidCube(40);
-		glutWireSphere(5.0, 40, 40);
-		objName = "Wire Sphere";
+		//glutWireSphere(5.0, 40, 40);
+		objName = "Triangle 1";
 		break;
 	case 3:
 		glutSolidCube(7.0);

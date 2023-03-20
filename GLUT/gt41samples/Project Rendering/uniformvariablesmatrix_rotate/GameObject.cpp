@@ -7,7 +7,7 @@ GameObject::GameObject()
 	objectDetails.shader = NULL;
 }
 
-void GameObject::createVertexBuffer(vec3 vertices[], int numverts)
+void GameObject::createVertexBuffer(GameObjectDetails vertices[], int numverts)
 {
 	cout << "Creating VBO..." << endl;
 

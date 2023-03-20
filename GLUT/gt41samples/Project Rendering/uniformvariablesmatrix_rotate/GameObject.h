@@ -6,7 +6,7 @@ struct GameObjectDetails
 {
 	vec3 position;
 	vec4 color;
-	vec3 normal;
+	//vec3 normal;
 	//c3 normal;
 	// and last add shader forgot to put
 	ShaderTechnique* shader;
@@ -21,7 +21,7 @@ public: // forgot to mention that it is public, will not work in project4.cpp
 
 	GameObject();
 
-	void createVertexBuffer(vec3 vertices[], int numverts);
+	void createVertexBuffer(GameObjectDetails vertices[], int numverts);
 	void render();
 	void setShader(ShaderTechnique* s);
 	void settingTranslation(float tranlateX, float translateY, float translateZ);
