@@ -115,6 +115,7 @@
 //	}
 //	glutPostRedisplay();
 //}
+<<<<<<< Updated upstream
 //// Routine to fill the vertex array with co-ordinates of the mapped sample points.
 //void fillVertexArray(void)
 //{
@@ -478,3 +479,88 @@
 //
 //	glutMainLoop();
 //}
+=======
+// Routine to output interaction instructions to the C++ window.
+void printInteraction(void)
+{
+	std::cout << "How to Interact:" << std::endl;
+	std::cout << "Press left/right arrow keys to increase/decrease the number of grid columns for CYLINDER ONLY." << std::endl
+		<< "Press up/down arrow keys to increase/decrease the number of grid rows for CYLINDER ONLY." << std::endl
+		<< "Use mouse scroll to zoom in and out" << std::endl
+		<< "F1, F2, F3, F4  switching the objects" << std::endl
+		<< "Right mouse click to change colour and exit application, maybe later the shaders(In progress)." << std::endl
+		<< "Press X, Y, Z to rotate objects." << std::endl;
+}
+
+void GoMenu(int value)
+{
+	switch (value)
+	{
+	case 1:
+		glColor3f(1.0, 0.0, 0.0);
+		break;
+	case 2:
+		glColor3f(0.0, 0.0, 1.0);
+		break;
+	case 3:
+		glColor3f(0.0, 1.0, 0.0);
+		break;
+	case 4:
+		exit(0);
+		break;
+	}
+	glutPostRedisplay();
+
+}
+
+//Main routine.
+int main(int argc, char** argv)
+{
+	printInteraction();
+	glutInit(&argc, argv);
+
+	glutInitContextVersion(4, 3);
+	glutInitContextProfile(GLUT_COMPATIBILITY_PROFILE);
+
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
+	glutInitWindowSize(1000, 500);
+	glutInitWindowPosition(100, 100);
+	glutCreateWindow("Rendering Project");
+	// Creating Menu
+	int sub1 = glutCreateMenu(GoMenu);
+	glutAddMenuEntry("Color the object red", 1);
+	glutAddMenuEntry("Color the object blue", 2);
+	glutAddMenuEntry("Color the object green", 3);
+	glutCreateMenu(GoMenu);
+	glutAddSubMenu("Object Colours", sub1);
+	glutAddMenuEntry("Would You like to exit", 4);
+	glutAttachMenu(GLUT_RIGHT_BUTTON);
+	glutDisplayFunc(drawScene);
+
+	// Must be done after glut is initialized!
+	GLenum res = glewInit();
+	if (res != GLEW_OK)
+	{
+		cerr << "Error: " << glewGetErrorString(res) << "\n";
+		return 1;
+	}
+
+	//buildShaders();
+
+	glutReshapeFunc(resize);
+	//initRendering();
+	glutKeyboardFunc(keyInputRotation);
+	glutSpecialFunc(specialKeyInputForMatrices);
+	glutSpecialFunc(specialKeyInputForChangingObjects);
+
+	//glutSpecialFunc(keyboard);
+	glutMouseFunc(mouse);
+
+	glewExperimental = GL_TRUE;
+	glewInit();
+
+	setup();
+
+	glutMainLoop();
+}
+>>>>>>> Stashed changes

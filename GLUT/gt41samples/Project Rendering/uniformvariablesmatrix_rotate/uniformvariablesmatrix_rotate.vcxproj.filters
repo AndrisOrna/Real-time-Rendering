@@ -19,7 +19,13 @@
     <ClCompile Include="ShaderTechnique.cpp">
       <Filter>CPP files</Filter>
     </ClCompile>
+<<<<<<< Updated upstream
     <ClCompile Include="main2.cpp" />
+=======
+    <ClCompile Include="Camera.cpp">
+      <Filter>CPP files</Filter>
+    </ClCompile>
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cylinder.h">
@@ -29,6 +35,9 @@
       <Filter>Header files</Filter>
     </ClInclude>
     <ClInclude Include="ShaderTechnique.h">
+      <Filter>Header files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
       <Filter>Header files</Filter>
     </ClInclude>
   </ItemGroup>

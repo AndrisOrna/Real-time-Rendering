@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="cylinder.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
@@ -20,6 +21,7 @@
     <ClCompile Include="ShaderTechnique.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="cylinder.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="ShaderTechnique.h" />
