@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="GameObject2.cpp">
+      <Filter>CPP_files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectRenderer2.cpp">
+      <Filter>CPP_files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderTech2.cpp">
+      <Filter>CPP_files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderTechnique2.cpp">
+      <Filter>CPP_files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aiterror.h">
+      <Filter>Header_files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject2.h">
+      <Filter>Header_files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderTech2.h">
+      <Filter>Header_files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderTechnique2.h">
+      <Filter>Header_files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragmentshader.glsl">
+      <Filter>Fragment_Shaders</Filter>
+    </None>
+    <None Include="fragmentshader_interpolation.glsl">
+      <Filter>Fragment_Shaders</Filter>
+    </None>
+    <None Include="fragmentshader2.glsl">
+      <Filter>Fragment_Shaders</Filter>
+    </None>
+    <None Include="fragmentShader3.glsl">
+      <Filter>Fragment_Shaders</Filter>
+    </None>
+    <None Include="vertexshader.glsl">
+      <Filter>Vertex_shaders</Filter>
+    </None>
+    <None Include="vertexshader_interpolation.glsl">
+      <Filter>Vertex_shaders</Filter>
+    </None>
+    <None Include="vertexshader2.glsl">
+      <Filter>Vertex_shaders</Filter>
+    </None>
+    <None Include="vertexShader3.glsl">
+      <Filter>Vertex_shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CPP_files">
+      <UniqueIdentifier>{a759ef22-01b6-420e-af76-fe06e66f6546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header_files">
+      <UniqueIdentifier>{3e5cf6f8-9bad-4955-b18e-2ab13918acff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fragment_Shaders">
+      <UniqueIdentifier>{962cc920-e6ab-4cf9-8626-10669c34ee46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vertex_shaders">
+      <UniqueIdentifier>{49930d6c-a138-48ee-b0d0-b5738e71ab91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
