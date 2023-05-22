@@ -6,7 +6,7 @@ unsigned int windowWidth = 800;
 unsigned int windowHeight = 500;
 unsigned int windowPos_X = 800;
 unsigned int windowPos_Y = 400;
-const char* windowTitle = "A00273758: Rendering Project - Part 1";
+const char* windowTitle = "Rendering Project - Part 1";
 
 // some global GameObjects
 GameObject gameObject1;

@@ -16,7 +16,7 @@ struct VertexData
 	vec3		normal;
 };
 
-class tusRenderObject
+class RenderObject
 {
 private:
 	GLuint vbo; // global vertex buffer object
@@ -30,7 +30,7 @@ private:
 	mat4 sca = mat4(1.0f);
 
 public:
-	tusRenderObject();
+	RenderObject();
 
 	// Creates a buffer based on the array of vertices passed into the function
 	void createBuffer(VertexData vertices[], int numverts);

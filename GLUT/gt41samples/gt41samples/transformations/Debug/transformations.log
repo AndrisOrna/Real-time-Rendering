@@ -1,1 +1,5 @@
-﻿  transformations.vcxproj -> C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\transformations\Debug\transformations.exe
+﻿  transformations.cpp
+  GLM: perspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
+  LINK : Debug\transformations.exe not found or not built by the last incremental link; performing full link
+  transformations.vcxproj -> C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\transformations\Debug\transformations.exe

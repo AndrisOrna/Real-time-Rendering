@@ -13,12 +13,12 @@
   <ItemGroup>
     <ClCompile Include="ProjectMain.cpp" />
     <ClCompile Include="ShaderTechnique.cpp" />
-    <ClCompile Include="tusRenderObject.cpp" />
+    <ClCompile Include="RenderObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aiterror.h" />
     <ClInclude Include="ShaderTechnique.h" />
-    <ClInclude Include="tusRenderObject.h" />
+    <ClInclude Include="RenderObject.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="fragmentshader.glsl" />
@@ -27,7 +27,7 @@
     <None Include="vertexshader.glsl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{BCF46ACD-FB76-4F57-A42A-4DCA2594D9BE}</ProjectGuid>
+    <ProjectGuid>{AA85EC99-B586-44E0-8F98-6ED5A3487412}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>basicapplication</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>

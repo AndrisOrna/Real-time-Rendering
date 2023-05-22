@@ -1,12 +1,12 @@
 #include "ShaderTechnique.h"
-#include "tusRenderObject.h"
+#include "RenderObject.h"
 #include <glm/gtc/matrix_transform.hpp>
 
 const int windowWidth = 1024;
 const int windowHeight = 768;
 
 // some GameObjects
-tusRenderObject triangleA;
+RenderObject triangleA;
 
 // some shaders
 ShaderTechnique shaderA;

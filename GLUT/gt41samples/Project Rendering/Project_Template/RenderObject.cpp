@@ -1,4 +1,4 @@
-#include "tusRenderObject.h"
+#include "RenderObject.h"
 
 tusRenderObject::tusRenderObject()
 {

@@ -1,0 +1,1 @@
+C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe

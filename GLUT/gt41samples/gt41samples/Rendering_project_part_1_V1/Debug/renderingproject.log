@@ -5,4 +5,5 @@ C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples
   ShaderTech2.cpp
   ShaderTechnique2.cpp
   Generating Code...
+  LINK : Debug\Project_part_1_version2.exe not found or not built by the last incremental link; performing full link
   renderingproject.vcxproj -> C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\Rendering_project_part_1_V1\Debug\Project_part_1_version2.exe

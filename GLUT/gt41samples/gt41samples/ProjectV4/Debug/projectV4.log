@@ -2,5 +2,4 @@
   Rendering_Project.cpp
   ShaderTechnique.cpp
   Generating Code...
-LINK : warning LNK4076: invalid incremental status file 'Debug\projectV4.ilk' (which will be deleted); linking nonincrementally
   projectV4.vcxproj -> C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\gt41samples\ProjectV4\Debug\projectV4.exe

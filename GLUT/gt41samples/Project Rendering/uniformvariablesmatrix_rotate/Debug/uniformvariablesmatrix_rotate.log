@@ -1,21 +1,2 @@
-﻿  Camera.cpp
-  cylinder.cpp
-  GameObject.cpp
-  main.cpp
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(38,20): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(56,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(93,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(98,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(165,12): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(166,21): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\main.cpp(166,11): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-  main2.cpp
-  GLM: perspective function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  GLM: rotate function taking degrees as a parameter is deprecated. #define GLM_FORCE_RADIANS before including GLM headers to remove this message.
-  Rendering_Project2.cpp
-  Rotate.cpp
-  ShaderTechnique.cpp
-  Generating Code...
-main2.obj : error LNK2005: _main already defined in main.obj
-main2.obj : error LNK2005: "unsigned int VBO" (?VBO@@3IA) already defined in main.obj
-Debug\uniformvariablesmatrix_rotate.exe : fatal error LNK1169: one or more multiply defined symbols found
+﻿  main.cpp
+  uniformvariablesmatrix_rotate.vcxproj -> C:\Users\andri\Documents\GitHub\Real-time-Rendering\GLUT\gt41samples\Project Rendering\uniformvariablesmatrix_rotate\Debug\uniformvariablesmatrix_rotate.exe
